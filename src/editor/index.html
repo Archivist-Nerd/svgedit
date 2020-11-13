@@ -409,31 +409,20 @@
         <se-button id="tool_star" title="Star Tool" src="./images/star.svg"></se-button>
         <se-button id="tool_polygon" title="Polygon Tool" src="./images/polygon.svg"></se-button>
       </div> <!-- tools_left -->
-      <div id="tools_bottom" class="tools_panel">
+      <div id="tools_bottom" class="tools_panel" >
         <!-- Zoom buttons -->
-        <div id="zoom_panel" class="toolset" title="Change zoom level">
-          <label>
-            <span id="zoomLabel" class="zoom_tool icon_label"></span>
-            <input id="zoom" size="3" value="100" type="text" />
-          </label>
-          <div id="zoom_dropdown" class="dropdown">
-            <button></button>
-            <ul>
-              <li>1000%</li>
-              <li>400%</li>
-              <li>200%</li>
-              <li>100%</li>
-              <li>50%</li>
-              <li>25%</li>
-              <li id="fit_to_canvas" data-val="canvas">Fit to canvas</li>
-              <li id="fit_to_sel" data-val="selection">Fit to selection</li>
-              <li id="fit_to_layer_content" data-val="layer">Fit to layer content</li>
-              <li id="fit_to_all" data-val="content">Fit to all content</li>
-              <li>100%</li>
-            </ul>
-          </div>
-          <div class="tool_sep"></div>
-        </div>
+        <se-dropdown id="zoom_dropdown" title="Change zoom level">
+          <se-option value="1000%">1000%</se-option>
+          <se-option value="400%">400%</se-option>
+          <se-option value="100%">200%</se-option>
+          <se-option value="100%">100%</se-option>
+          <se-option value="50%">50%</se-option>
+          <se-option value="25%">25%</se-option>
+          <se-option value="canvas">Fit to canvas</se-option>
+          <se-option value="selection">Fit to selection</se-option>
+          <se-option value="layer">Fit to layer content</se-option>
+          <se-option value="content">Fit to all content</se-option>
+        </se-dropdown>
         <div id="tools_bottom_2">
           <div id="color_tools">
             <div class="color_tool" id="tool_fill">

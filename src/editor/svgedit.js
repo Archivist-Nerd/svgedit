@@ -3372,16 +3372,6 @@ editor.init = () => {
     }
   });
 
-  editor.addDropDown('#zoom_dropdown', function () {
-    const item = $(this);
-    const val = item.data('val');
-    if (val) {
-      zoomChanged(window, val);
-    } else {
-      changeZoom({value: Number.parseFloat(item.text())});
-    }
-  }, true);
-
   addAltDropDown('#stroke_linecap', '#linecap_opts', function () {
     setStrokeOpt(this, true);
   }, {dropUp: true});
@@ -4552,11 +4542,6 @@ editor.init = () => {
 
   $('#group_opacityLabel').click(function () {
     $('#opacity_dropdown button').mousedown();
-    $(window).mouseup();
-  });
-
-  $('#zoomLabel').click(function () {
-    $('#zoom_dropdown button').mousedown();
     $(window).mouseup();
   });
 
